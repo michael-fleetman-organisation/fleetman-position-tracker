@@ -27,13 +27,15 @@ public class MessageProcessor {
 	public void processPositionMessageFromQueue(Map<String, String> incomingMessage ) throws ParseException 
 	{
 		Date convertedDatestamp = new java.util.Date();
+                Double myVarDb = 47.5
+                BigDecimal myVar = (BigDecimal)BigDecimal.valueOf(myVarDb);
 		
 		VehiclePosition newReport = new VehicleBuilder()
 				                          .withName(incomingMessage.get("vehicle"))
 				                          .withLat(new BigDecimal(incomingMessage.get("lat")))
 				                          .withLng(new BigDecimal(incomingMessage.get("long")))
 				                          .withTimestamp(convertedDatestamp)
-				                          .withSpeed(47.5)
+				                          .withSpeed(myVar)
                                                           .build();
 				                                        
 		data.updatePosition(newReport);
