@@ -27,7 +27,7 @@ public class MessageProcessor {
 	public void processPositionMessageFromQueue(Map<String, String> incomingMessage ) throws ParseException 
 	{
 		Date convertedDatestamp = new java.util.Date();
-                Double myVarDb = 47.5
+                Double myVarDb = 47.5;
                 BigDecimal myVar = (BigDecimal)BigDecimal.valueOf(myVarDb);
 		
 		VehiclePosition newReport = new VehicleBuilder()
